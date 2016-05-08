@@ -4,6 +4,6 @@
 module.exports = {
 // MongoDB connection options
 mongo: {
-uri: 'mongodb://test:edw16@ds013290.mlab.com:13290/customers_db'
+uri: 'mongodb://zohaibjabbar:Zohaib66@ds013290.mlab.com:13290/customers_db'
 }
 };

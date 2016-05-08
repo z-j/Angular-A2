@@ -10,7 +10,7 @@ var path = require('path');
 var controller = require('./api/users/user.controller');
 var router = express.Router();
 
-
+mongoose.connect('mongodb://test:edw16@ds013290.mlab.com:13290/customers_db');
 
 //create an express app
 var app = express();
