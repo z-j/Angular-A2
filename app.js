@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config = require('./config/');
 var path = require('path');
+var jwt    = require('jsonwebtoken');
 
 var controller = require('./api/users/user.controller');
 var router = express.Router();

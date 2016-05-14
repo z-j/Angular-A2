@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var jwt    = require('jsonwebtoken');
 var act = require('./activity.model');
 
 exports.index = function(req, res) {
@@ -11,6 +12,33 @@ exports.index = function(req, res) {
 	}
 	return res.json(200, acts);
 	});
+};
+
+exports.index1 = function(req, res) {
+	console.log("get Authenticated Activities call");
+	var token = req.params.token;
+	console.log("token:"+token);
+	if (token) {
+
+	    // verifies secret and checks exp
+	    jwt.verify(token, "myTokenSecret", function(err, decoded) {      
+	      if (err) {
+	        return res.json({ success: false, message: 'Failed to authenticate token.' });    
+	      } else {
+	        // if everything is good, save to request for use in other routes
+	        req.decoded = decoded;    
+	        act.find(function (err, acts) {
+				if(err) { 
+					console.log("in error");
+					console.log(err);
+					return handleError(res, err); 
+				}
+				return res.json(200, acts);
+				});
+	      }
+	    });
+
+  	}
 };
 
 exports.userActivities = function(req, res) {
@@ -58,7 +86,7 @@ exports.delete = function(req, res) {
 	if(!act) { return res.send(404); }
 	act.remove(function(err) {
 	if(err) { return handleError(res, err); }
-		return res.send(204);
+		return res.send(200, "{success: true}");
 	});
 	});
 };
