@@ -70,30 +70,18 @@ View Activities Summaries in Graphical format
 
 Describe your web API.
 
-| HTTP Verb & Path |  Description |
-| -- | -- |
-| GET:  /api/users |return list of all users |
-| PUT:  /api/users/:id |updates the user with given id |
-| POST: /api/users |create a new user |
-| DELETE: /api/users/:id |delete the user with given id |
-| GET:  /api/activities |return list of all activities |
-| PUT:  /api/activities/:id |updates the activity with given id |
-| POST: /api/activities |create a new activity |
-| DELETE: /api/activities/:id |delete the activity with given id |
-
-| POST: /api/authenticate/ |returns the token, {username: uname, pwd: pwd} |
-| GET:  /api/activities/:token |return list of all activities, if token is valid |
-
-Describe your web API.
-
-| HTTP Verb & Path |  Description |
-| -- | -- |
-| GET: /api/contacts |return a list of contacts |
-| POST: /api/contacts |add a new contact |
-| PUT: /posts/api/contacts/:id | update a contact |
-| DELETE: /posts/api/contacts/:id | delete a contact |
-
-
+| HTTP Verb and Path |  Description |
+| -------- | -------- |
+| GET:  /api/users | return list of all users |
+| PUT:  /api/users/:id | updates the user with given id |
+| POST: /api/users | create a new user |
+| DELETE: /api/users/:id | delete the user with given id |
+| GET:  /api/activities | return list of all activities |
+| PUT:  /api/activities/:id | updates the activity with given id |
+| POST: /api/activities | create a new activity |
+| DELETE: /api/activities/:id | delete the activity with given id |
+| POST: /api/authenticate/ | returns the token, {username: uname, pwd: pwd} |
+| GET:  /api/activities/:token | return list of all activities, if token is valid |
 
 ###Independent learning.
 
