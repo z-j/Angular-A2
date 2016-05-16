@@ -84,6 +84,15 @@ Describe your web API.
 | POST: /api/authenticate/ |returns the token, {username: uname, pwd: pwd} |
 | GET:  /api/activities/:token |return list of all activities, if token is valid |
 
+Describe your web API.
+
+| HTTP Verb & Path |  Description |
+| -- | -- |
+| GET: /api/contacts |return a list of contacts |
+| POST: /api/contacts |add a new contact |
+| PUT: /posts/api/contacts/:id | update a contact |
+| DELETE: /posts/api/contacts/:id | delete a contact |
+
 
 
 ###Independent learning.
