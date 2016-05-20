@@ -1,5 +1,3 @@
-#Assignment 2 - AngularJS app.
-
 Name: Zohaib Jabbar
 
 ###Overview.
